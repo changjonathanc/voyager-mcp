@@ -4,20 +4,25 @@ A Voyager-inspired MCP server that enables coding agents to build and immediatel
 
 ## Features
 
-- **MCP as CLI wrapper**: simply allows agent to execute CLI commands, so tools are instantly available.
-- **Memory**: Tools with `.desc` files get descriptions loaded automatically in MCP tool schema in the next session.
+- **MCP as CLI wrapper**: The tool exposes a single tool `run_shell_command`, so tools are instantly available.
+- **Configurable**:
+  - The tool description can be configured from `~/.voyager/prompt.txt`, and it dynamically loads available executables `~/.voyager/bin/`.
+  - Each executable can provide a `.desc` file, which will be loaded automatically in MCP tool schema in the next session.
 - **Secure Execution**: Uses subprocess with argument lists to prevent shell injection.
-- **Configurable**: Tool description can be configured from `~/.voyager/prompt.txt`
 
 ## Installation
 
-The script includes embedded dependencies and can be run directly with uv:
-
 ```bash
-claude mcp add voyager uv run
+# add it to claude code
+claude mcp add voyager uvx voyager-mcp
+
+# try it with mcp inspector
+npx -y @modelcontextprotocol/inspector uvx voyager-mcp
 ```
 
-## MIT LICENSE
+## LICENSE
+
+MIT
 
 ## Citation
 ```

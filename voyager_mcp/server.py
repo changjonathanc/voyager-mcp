@@ -21,7 +21,7 @@ from mcp.server.fastmcp import FastMCP, Context
 # Constants
 EXECUTABLE_PERMISSION = 0o755
 DEFAULT_TIMEOUT = 180
-CONFIG_DIR_NAME = ".voyager"
+CONFIG_DIR_NAME = "voyager"
 BIN_DIR_NAME = "bin"
 SAMPLE_TOOL_NAME = "hello"
 
@@ -204,7 +204,7 @@ async def run_shell_command(
             text=True,
             timeout=timeout,
             check=False,  # Don't raise exception on non-zero exit
-            env=os.environ.copy()  # Use updated environment with ~/.voyager/bin in PATH
+            env=os.environ.copy()  # Use updated environment with ~/.config/voyager/bin in PATH
         )
 
         return {

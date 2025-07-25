@@ -5,8 +5,8 @@ A Voyager-inspired MCP server that enables coding agents to build and immediatel
 ## Features
 
 - **Single Tool**: The tool exposes a single tool `run_shell_command`.
-- **Skill library**: Agents can add new commands in `~/.voyager/bin/`.
-- **Dynamic schema**: The `run_shell_command` tool description can be configured from `~/.voyager/prompt.txt`, and it also dynamically loads available executables in `~/.voyager/bin/`.
+- **Skill library**: Agents can add new commands in `~/.config/voyager/bin/`.
+- **Dynamic schema**: The `run_shell_command` tool description can be configured from `~/.config/voyager/prompt.txt`, and it also dynamically loads available executables in `~/.config/voyager/bin/`.
 - **Configurable**: Each executable can provide a `.desc` file, which will be included in the `run_shell_command` tool description.
 - **Secure Execution**: Uses subprocess with argument lists to prevent shell injection.
 
